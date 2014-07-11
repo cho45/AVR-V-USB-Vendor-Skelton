@@ -1,0 +1,25 @@
+{
+	"name": "USB Sample",
+	"description": "My first Chrome App.",
+	"version": "0.1",
+	"manifest_version": 2,
+	"minimum_chrome_version": "31",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"permissions": [
+		"usb",
+		{
+			"usbDevices": [
+				{
+					"vendorId": 5824,
+					"productId": 1500
+				}
+			]
+		}
+	],
+
+	"icons": { "16": "icon-16.png", "128": "icon-128.png" }
+}
