@@ -9,14 +9,14 @@ V-USB がスタンダードなリクエストには答えてくれるのでか�
  * [./sketch.rb]( ./sketch.rb ) libusb + ruby
  * [./sketch-chrome-app/]( ./sketch-chrome-app/ ) Chrome App
 
-回路図の例
+回路図の例 (Eagle)
 
  * [./circuit/]( ./circuit/ )
 
 ## 背景
 
 Mac の場合 HID デバイスへの低レベルアクセスを OS が握っているため、
-HID クラスとしてデバイスを作成すると、かえって面倒なことになる。
+HID クラスとしてデバイスを作成すると、かえって面倒なことになる ( control_transfer は可能だが、claim_interface が不可能なので他のことは何もできない)。
 
 
 ## 覚書
@@ -28,5 +28,6 @@ HID クラスとしてデバイスを作成すると、かえって面倒なこ�
 
 
 ref.
+
  * http://vusb.wikidot.com/driver-api
  * http://vusb.wikidot.com/host-software
