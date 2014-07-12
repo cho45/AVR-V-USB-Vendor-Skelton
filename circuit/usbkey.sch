@@ -3985,12 +3985,14 @@ Japanese symbol</description>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
-<part name="R1" library="r-j" deviceset="R-" device="1/4W-07.62" value="168"/>
-<part name="R2" library="r-j" deviceset="R-" device="1/4W-07.62" value="168"/>
+<part name="R1" library="r-j" deviceset="R-" device="1/4W-07.62" value="68"/>
+<part name="R2" library="r-j" deviceset="R-" device="1/4W-07.62" value="68"/>
 <part name="R3" library="r-j" deviceset="R-" device="1/4W-02.54-V" value="1.5k"/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
+<part name="C4" library="c-j" deviceset="C-" device="50V-0302-2.54" value="0.1u"/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4040,6 +4042,8 @@ Japanese symbol</description>
 <instance part="P+4" gate="VCC" x="121.92" y="109.22"/>
 <instance part="GND7" gate="1" x="121.92" y="91.44"/>
 <instance part="P+5" gate="VCC" x="27.94" y="93.98"/>
+<instance part="C4" gate="C" x="33.02" y="101.6"/>
+<instance part="GND3" gate="1" x="27.94" y="104.14"/>
 </instances>
 <busses>
 </busses>
@@ -4100,6 +4104,11 @@ Japanese symbol</description>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="114.3" y1="96.52" x2="121.92" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="96.52" x2="121.92" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND3" gate="1" pin="GND"/>
+<pinref part="C4" gate="C" pin="1"/>
+<wire x1="27.94" y1="106.68" x2="33.02" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -4185,6 +4194,8 @@ Japanese symbol</description>
 <pinref part="IC1" gate="G$1" pin="PC6(/RESET)"/>
 <wire x1="104.14" y1="96.52" x2="33.02" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="96.52" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="C4" gate="C" pin="2"/>
+<junction x="33.02" y="96.52"/>
 </segment>
 </net>
 <net name="N$10" class="0">
